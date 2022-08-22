@@ -8,6 +8,7 @@ public class B03BSCeilingOfNo {
         System.out.println(ceilingNO);
     }
 
+    // smallest element in an array greater or equal to target
     public static int ceiling(int arr[], int target) {
         if(target>arr[arr.length-1]){
             return -1;

@@ -1,7 +1,7 @@
 package org.ds.arrays;
 
 // search in range
-public class L03LinearSearch {
+public class C03LinearSearch {
 
 	public static void main(String[] args) {
 		int arr[] = { 10, 30, 23, 50, 90, 55 };

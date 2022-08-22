@@ -1,6 +1,6 @@
 package org.ds.arrays;
 // find the index
-public class L01LinearSearch {
+public class C01LinearSearch {
 	public static void main(String[] args) {
 		int arr[] = { 10, 30, 23, 50, 90, 55 };
 		int target = 23;

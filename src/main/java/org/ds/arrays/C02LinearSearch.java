@@ -1,6 +1,6 @@
 package org.ds.arrays;
 
-public class L02LinearSearch {
+public class C02LinearSearch {
 	public static void main(String[] args) {
 
 		String str = "rahul";

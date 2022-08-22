@@ -2,7 +2,7 @@ package org.ds.arrays;
 
 import java.util.Arrays;
 
-public class L06SearchIn2DArray {
+public class C06SearchIn2DArray {
 	public static void main(String[] args) {
 		int arr[][] = { 
 				{ 2, 5, 12 }, 
