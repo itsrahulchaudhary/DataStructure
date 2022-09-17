@@ -4,8 +4,8 @@ package org.ds.arrays;
 public class B07BSInfiniteArray {
     public static void main(String[] args) {
 
-        int arr[] = {3, 5, 7, 9, 10, 90, 100, 130, 140, 160, 170};
-        int target = 10;
+        int arr[] = {3, 5, 7, 9, 70, 90, 100, 130, 140, 160, 170,180,200,210,240};
+        int target = 130;
         int result = ans(arr, target);
         System.out.print(result);
 

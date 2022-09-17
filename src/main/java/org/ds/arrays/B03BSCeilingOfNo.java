@@ -3,7 +3,7 @@ package org.ds.arrays;
 public class B03BSCeilingOfNo {
 
     public static void main(String[] args) {
-        int arr[] = { 2, 5, 8, 12, 15, 20, 24, 26, 28, 30 };
+        int arr[] = { 2, 5, 8, 9,15, 20, 24, 26, 28, 30 };
         int ceilingNO = ceiling(arr, 12);
         System.out.println(ceilingNO);
     }

@@ -2,7 +2,7 @@ package org.ds.arrays;
 
 public class B04BSFloorOfNo {
     public static void main(String[] args) {
-        int arr[] = { 2, 5, 8, 12, 15, 20, 24, 26, 28, 30 };
+        int arr[] = { 2, 5, 8,10, 15, 20, 24, 26, 28, 30 };
         int floorNo = floor(arr, 12);
         System.out.println(floorNo);
     }

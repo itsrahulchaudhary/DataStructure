@@ -1,9 +1,9 @@
 package org.ds.arrays;
-
+// Find the smallest Letter greater Then Target
 public class B05BSSmallestLetter {
     public static void main(String[] args) {
         char letters[] = {'c','f','j'};
-        char target = 'a';
+        char target = 'c';
         char ans= nextGraterLetter(letters, target);
         System.out.print(ans);
     }
