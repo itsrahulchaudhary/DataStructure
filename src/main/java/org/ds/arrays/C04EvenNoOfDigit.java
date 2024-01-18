@@ -3,7 +3,7 @@ package org.ds.arrays;
 public class C04EvenNoOfDigit {
 	public static void main(String[] args) {
 
-		int arr[] = { 23, 567, 8, 8732, 341, 23 };
+		int arr[] = { 23, 567, 8, 8732, 341, 23};
 		System.out.println(findNumber(arr));
 	}
 

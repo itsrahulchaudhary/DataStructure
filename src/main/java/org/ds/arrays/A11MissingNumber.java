@@ -4,7 +4,7 @@ public class A11MissingNumber {
 
     public static void main(String[] args) {
 
-        int arr[] = {1, 5, 2, 4, 6, 8, 7, 9,10};
+        int arr[] = {1, 5, 2, 4, 6, 8, 7,3, 9,10};
         int num = findNumber(arr);
         System.out.print(num);
 

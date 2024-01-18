@@ -1,119 +1,103 @@
 package org.ds.demo;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-// Leadcode : 69. Sqrt(x)
 public class Demo2 {
 
     public static void main(String[] args) {
-        int nums[] = {1, 3, 5, 5, 5, 5, 67, 123, 125};
-        int target = 5;
-        int ans[]= firstAndLast(nums,target);
-        System.out.print(Arrays.toString(ans));
-    }
+        //int arr[] = {2,4,6,8,20,35,1,10};
+        //int arr[] = {2,4,6,8,50,1,20,35};
+       // System.out.println(isSorted(arr));
+        //isSorted(arr);
+       // min(arr);
+       // fib(6);
 
-    public static int binarySearch(int arr[], int target){
-        int start = 0;
-        int end = arr.length-1;
-        boolean asc = arr[start]<arr[end];
-        while(start<=end){
-            int mid = start + (end-start)/2;
-            if(target==arr[mid]){
-                return mid;
-            }
-            if(asc){
-                if(target<arr[mid]){
-                    end =mid-1;
-                }else if(target>arr[mid]){
-                    start = mid+1;
-                }
-            }else{
-                if(target>arr[mid]){
-                    end =mid-1;
-                }else if(target<arr[mid]){
-                    start = mid+1;
-                }
-            }
-
+//        int arr[] = { 2, 3, 5, 1, 6, 4 };
+//        int sum = 6;
+//        pairSum2(arr,sum);
+        int arr[] = { 2, -1, 4, -8, 3, 5, -9 };
+        segregates(arr);
+        for(int i=0; i<arr.length; i++){
+            System.out.print(arr[i]+" ");
         }
-        return -1;
+
+
     }
 
-    public static int ceilingNo(int arr[], int target){
-        int start = 0;
-        int end = arr.length-1;
-        while(start<=end){
-            int mid= start + (end-start)/2;
-            if(target<arr[mid]){
-                end=mid-1;
-            }else if(target>arr[mid]){
-                start=mid+1;
-            }else{
-                return mid;
+    public static void segregates(int arr[]){
+        int i=0;
+        for(int j=0; j<arr.length; j++){
+            if(arr[j]<0){
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
             }
         }
-        return start;
     }
 
-    public static int floar(int arr[], int target){
-        int start =0;
-        int end =arr.length-1;
-        while(start<=end){
-            int mid = start+(end-start)/2;
-            if(target<arr[mid]){
-                end =mid-1;
-            }else if(target>arr[mid]){
-                start= mid+1;
+
+    public static void pairSum2(int arr[], int sum){
+        int i = 0;
+        int j = arr.length-1;
+        while (i<j){
+            if(arr[i]+arr[j]>sum){
+                j--;
+            } else if (arr[i]+arr[j]<sum) {
+                i++;
             }else {
-                return mid;
+                System.out.println(arr[i]+" : "+arr[j]);
+                i++;
+                j--;
             }
         }
-        return end;
     }
 
-    public static char smallest(char ch[], char target){
-        int start = 0;
-        int end = ch.length-1;
-        while (start<=end){
-            int mid = start + (end-start)/2;
-            if(target<ch[mid]){
-                end=mid-1;
-            }else if(target>ch[mid]){
-                start=mid+1;
-            }
-        }
-        return ch[start % ch.length];
-    }
-
-    public static int[] firstAndLast(int arr[], int target){
-        int ans[] ={-1,-1};
-        ans[0]= search(arr,target,true);
-        ans[1]= search(arr,target,false);
-        return ans;
-    }
-
-    public static int search(int arr[], int target, boolean firstPosition){
-        int ans=-1;
-        int start=0;
-        int end=arr.length-1;
-        while (start<=end){
-            int mid = start + (end-start)/2;
-            if(target<arr[mid]){
-                end = mid-1;
-            } else if (target>arr[mid]) {
-                start=mid+1;
-            }else {
-                ans=mid;
-                if(firstPosition){
-                    end=mid-1;
-                }else{
-                    start=mid+1;
+    public static void pairSum(int arr[], int sum){
+        for(int i=0; i<arr.length; i++){
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[i]+arr[j]==sum){
+                    System.out.println(arr[i]+" : "+arr[j]);
                 }
             }
-
         }
-
-        return ans;
     }
+
+
+    public static void fib(int n){
+        int ar[] = new int[n+1];
+        ar[0] = 0;
+        ar[1] = 1;
+        for(int i=2; i<ar.length; i++){
+            ar[i] = ar[i-2]+ar[i-1];
+        }
+        System.out.println(ar[ar.length-1]);
+    }
+    public static void min(int arr[]){
+        int mn = arr[0];
+        for(int i=1; i<arr.length; i++){
+            if(arr[i]<mn){
+                mn = arr[i];
+            }
+        }
+        System.out.println(mn);
+    }
+    public static void max(int arr[]){
+        int mx = arr[0];
+        for(int i=1; i<arr.length; i++){
+            if(arr[i]>mx){
+                mx=arr[i];
+            }
+        }
+        System.out.println(mx);
+    }
+    public static boolean isSorted(int arr[]){
+        for(int i=1; i<arr.length; i++){
+            System.out.println("P : "+i+" : "+arr[i]);
+            if(arr[i-1] > arr[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
 }
